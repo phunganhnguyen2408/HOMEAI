@@ -21,12 +21,12 @@ function Products() {
             <div className="products-grid">
             {products.map((product) => (
             <div className="products-card" key={product.product_id}>
-                <img src="{product.image}" alt="product.product_name"/>
+                <img src="{product.image}" alt={product.product_name}/>
                     <h2>{product.product_name}</h2>
                     <p className="product.price">Giá:{product.price} VNĐ</p>
                     <p>Chất liệu: {product.material}</p>
                     <p>Màu sắc: {product.color}</p>
-                    <button>Xem chi tiết</button>
+                    <button className="detail-btn">Xem chi tiết</button>
                 </div>
             ))}
         </div>
