@@ -1,0 +1,396 @@
+.account-page {
+    min-height: calc(100vh - 130px);
+    padding: 48px 24px 72px;
+    background:
+        radial-gradient(ellipse at top left, rgba(220, 239, 231, 0.6), transparent 38%),
+        #f6f8f6;
+    color: #203b31;
+}
+
+.account-shell {
+    width: min(100%, 1120px);
+    margin: 0 auto;
+}
+
+.account-hero,
+.account-stats article,
+.account-orders,
+.account-state {
+    border: 1px solid #e2ebe5;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 8px 26px rgba(32, 59, 49, 0.045);
+}
+
+.account-hero {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px 34px;
+}
+
+.account-avatar {
+    display: grid;
+    flex: 0 0 70px;
+    width: 70px;
+    height: 70px;
+    place-items: center;
+    border: 5px solid #f0f7f2;
+    border-radius: 50%;
+    background: #dcebe1;
+    color: #285747;
+    font-size: 27px;
+    font-weight: 800;
+}
+
+.account-identity {
+    min-width: 0;
+}
+
+.account-eyebrow {
+    color: #47816b;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.account-identity h1 {
+    margin: 7px 0 5px;
+    color: #203b31;
+    font-size: clamp(23px, 3vw, 31px);
+}
+
+.account-identity p {
+    margin: 0;
+    color: #728078;
+    font-size: 14px;
+    overflow-wrap: anywhere;
+}
+
+.account-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.account-admin,
+.account-logout,
+.account-primary-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 0 15px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s, transform 0.2s;
+}
+
+.account-admin {
+    background: #eaf3ee;
+    color: #285747;
+}
+
+.account-admin:hover {
+    background: #dcebe1;
+}
+
+.account-logout {
+    border-color: #e5eae6;
+    background: #fff;
+    color: #5d6b63;
+}
+
+.account-logout:hover {
+    border-color: #ebc9c6;
+    background: #fff7f6;
+    color: #a63b35;
+}
+
+.account-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+    margin: 18px 0;
+}
+
+.account-stats article {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 0;
+    padding: 21px 23px;
+}
+
+.account-stat-icon,
+.account-empty-orders > span {
+    display: grid;
+    flex: 0 0 44px;
+    width: 44px;
+    height: 44px;
+    place-items: center;
+    border-radius: 13px;
+    background: #eaf3ee;
+    color: #35745b;
+}
+
+.account-stats article > div {
+    display: grid;
+    gap: 5px;
+    min-width: 0;
+}
+
+.account-stats b {
+    color: #203b31;
+    font-size: clamp(18px, 2vw, 23px);
+    overflow-wrap: anywhere;
+}
+
+.account-stats article > div > span {
+    color: #77827b;
+    font-size: 12px;
+}
+
+.account-orders {
+    padding: 26px 30px;
+}
+
+.account-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 15px;
+}
+
+.account-section-heading h2 {
+    margin: 6px 0 0;
+    color: #203b31;
+    font-size: 21px;
+}
+
+.account-section-heading > a {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: #34745a;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.account-section-heading > a:hover {
+    color: #1b513b;
+}
+
+.account-table-wrap {
+    overflow-x: auto;
+}
+
+.account-orders table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.account-orders th,
+.account-orders td {
+    padding: 15px 12px;
+    border-bottom: 1px solid #edf1ed;
+    color: #536259;
+    font-size: 13px;
+    text-align: left;
+}
+
+.account-orders th {
+    color: #879189;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+}
+
+.account-orders tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.account-order-code {
+    color: #285747 !important;
+    font-weight: 700;
+}
+
+.account-amount,
+.account-amount-heading {
+    text-align: right !important;
+}
+
+.account-amount {
+    color: #203b31 !important;
+    font-weight: 700;
+}
+
+.account-order-status {
+    display: inline-flex;
+    padding: 6px 10px;
+    border-radius: 20px;
+    background: #fff6df;
+    color: #946615;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.status-confirmed,
+.status-delivered {
+    background: #e8f5ec;
+    color: #327348;
+}
+
+.status-shipping,
+.status-processing {
+    background: #eaf3ff;
+    color: #35659c;
+}
+
+.status-cancelled {
+    background: #fff0ef;
+    color: #a63b35;
+}
+
+.account-empty-orders {
+    display: grid;
+    justify-items: center;
+    padding: 34px 16px 22px;
+    text-align: center;
+}
+
+.account-empty-orders > span {
+    margin-bottom: 13px;
+}
+
+.account-empty-orders h3 {
+    margin: 0;
+    color: #29483a;
+    font-size: 17px;
+}
+
+.account-empty-orders p {
+    max-width: 430px;
+    margin: 8px 0 18px;
+    color: #77827b;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.account-primary-link {
+    background: #285747;
+    color: #fff;
+}
+
+.account-primary-link:hover {
+    transform: translateY(-1px);
+    background: #1b4737;
+}
+
+.account-notice {
+    margin: 0 0 16px;
+    padding: 13px 16px;
+    border: 1px solid #cce7d4;
+    border-radius: 10px;
+    background: #f0faf2;
+    color: #2d7044;
+    font-size: 13px;
+}
+
+.account-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 18px;
+    color: #89938c;
+    font-size: 12px;
+}
+
+.account-state {
+    width: min(100%, 520px);
+    margin: 50px auto;
+    padding: 32px;
+    text-align: center;
+}
+
+.account-state h1 {
+    margin: 0;
+    color: #203b31;
+    font-size: 23px;
+}
+
+.account-state p {
+    margin: 10px 0 20px;
+    color: #728078;
+    line-height: 1.6;
+}
+
+.account-state-error .account-primary-link {
+    margin: 0 auto;
+}
+
+@media (max-width: 760px) {
+    .account-page {
+        padding: 26px 15px 48px;
+    }
+
+    .account-hero {
+        flex-wrap: wrap;
+        padding: 23px;
+    }
+
+    .account-actions {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .account-stats {
+        grid-template-columns: 1fr;
+        gap: 11px;
+    }
+
+    .account-stats article {
+        padding: 17px 19px;
+    }
+
+    .account-orders {
+        padding: 21px 17px;
+    }
+
+    .account-section-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 420px) {
+    .account-avatar {
+        flex-basis: 56px;
+        width: 56px;
+        height: 56px;
+    }
+
+    .account-identity h1 {
+        font-size: 21px;
+    }
+
+    .account-actions > * {
+        flex: 1;
+    }
+
+    .account-state {
+        padding: 24px 18px;
+    }
+}
